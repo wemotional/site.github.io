@@ -4,8 +4,7 @@ let minTempInput = document.getElementById("minTempInput");
 let maxTempInput = document.getElementById("maxTempInput");            
 let padInput = document.getElementById("padType");
 let areaInput = document.getElementById("areaType");
-let uvInput1 = document.getElementById("uvResist1");
-let uvInput2 = document.getElementById("uvResist2");
+let uvInput = document.getElementById("uvResist");
 let pipelineLenghtInput = document.getElementById("pipelineLenght");
 let pressureInput = document.getElementById("pressureInput");
 let buttonCount = document.getElementById("buttonCount");
@@ -85,12 +84,8 @@ areaInput.addEventListener('input', function(){
     area = parseInt(areaInput.value);
     //console.log(area);
 });
-uvInput1.addEventListener('input', function(){
-    uv = 1;
-    //console.log(uv);
-});
-uvInput2.addEventListener('input', function(){
-    uv = 2;
+uvInput.addEventListener('input', function(){
+    uv = parseInt(uvInput.value);
     //console.log(uv);
 });
 pipelineLenghtInput.addEventListener('input', function(){
