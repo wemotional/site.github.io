@@ -4,7 +4,8 @@ let minTempInput = document.getElementById("minTempInput");
 let maxTempInput = document.getElementById("maxTempInput");            
 let padInput = document.getElementById("padType");
 let areaInput = document.getElementById("areaType");
-let uvInput = document.getElementById("uvResist");
+let uvInput1 = document.getElementById("uvResist1");
+let uvInput2 = document.getElementById("uvResist2");
 let pipelineLenghtInput = document.getElementById("pipelineLenght");
 let pressureInput = document.getElementById("pressureInput");
 let buttonCount = document.getElementById("buttonCount");
@@ -62,7 +63,6 @@ let material3 = new material("ПВХ (поливинилхлорид)", 0, 45, 2
 let material4 = new material("Оцинкованная сталь", -30, 100, 1, 1, 1, 16, 270, "Трубы ВГП оцинкованные, диаметр 25–50 мм", "Прочная, устойчива к давлению, но подвержена коррозии в агрессивной среде");
 let material5 = new material("Асбестоцемент", 0, 45, 2, 3, 2, 6, 110, "Асбестоцементные трубы ВТ6", "Хрупкий, используется в подземной прокладке без давления");
 let material6 = new material("Полипропилен (PP-R)", -10, 95, 3, 1, 2, 10, 100, "Полипропиленовые трубы PN10, PN20", "Подходит только для внутренних систем; для уличной прокладки не применяется");
-//let test = new material("test", -20, 60, 2, 3, 1, 16, 320,"Высокопрочный чугун с шаровидным графитом, DN100–DN300", "Подходит для подземных и агрессивных условий, высокая прочность" )
 materials = [material1, material2, material3, material4, material5, material6];
 
 
@@ -70,31 +70,27 @@ materials = [material1, material2, material3, material4, material5, material6];
 // Реализация считывания данных с полей
 minTempInput.addEventListener('input', function(){
     minTemp = parseInt(minTempInput.value);
-    //console.log(minTemp);
 });
 maxTempInput.addEventListener('input', function() {
     maxTemp = parseInt(maxTempInput.value);
-    //console.log(maxTemp);
 });
 padInput.addEventListener('input', function(){
     pad = parseInt(padInput.value);
-    //console.log(pad);
 });
 areaInput.addEventListener('input', function(){
     area = parseInt(areaInput.value);
-    //console.log(area);
 });
-uvInput.addEventListener('input', function(){
-    uv = parseInt(uvInput.value);
-    //console.log(uv);
+uvInput1.addEventListener('input', function(){
+    uv = 1;
+});
+uvInput2.addEventListener('input', function(){
+    uv = 2;
 });
 pipelineLenghtInput.addEventListener('input', function(){
     pipeline = parseInt(pipelineLenghtInput.value);
-    console.log(pipeline);
 });
 pressureInput.addEventListener('input', function(){
     pressure = parseInt(pressureInput.value);
-    //console.log(pressure);
 })
 
 
